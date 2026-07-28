@@ -1,0 +1,1256 @@
+/* ==========================================================
+   GLOBAL
+========================================================== */
+
+:root {
+
+  --primary: #1F4E79;
+  --secondary: #0F6CBD;
+  --warning: #F4B400;
+  --success: #16A34A;
+  --danger: #DC2626;
+
+  --background: #F5F7FB;
+  --card: #FFFFFF;
+  --border: #E5E7EB;
+  --text: #1F2937;
+  --muted: #6B7280;
+
+  --radius: 18px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, .08);
+
+}
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text);
+
+}
+
+.app-wrapper {
+
+  min-height: 100vh;
+
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.tool-header {
+
+  background: white;
+  padding: 22px 30px;
+  border-bottom: 1px solid var(--border);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+
+}
+
+.tool-brand h3 {
+
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
+
+}
+
+.tool-brand small {
+
+  font-size: 14px;
+
+}
+
+.form-label {
+
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+
+}
+
+.form-control {
+
+  height: 46px;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+
+}
+
+.form-control:focus {
+
+  box-shadow: none;
+
+  border-color: var(--secondary);
+
+}
+
+.form-select {
+
+  height: 46px;
+
+  border-radius: 12px;
+
+}
+
+.btn-warning {
+
+  height: 46px;
+
+  font-weight: 600;
+
+  border-radius: 12px;
+
+}
+
+/* ==========================================================
+   WORKFLOW
+========================================================== */
+
+.workflow-section {
+
+  background: white;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid var(--border);
+
+}
+
+.workflow-progress {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.workflow-step {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  min-width: 115px;
+
+}
+
+.workflow-step span {
+
+  margin-top: 8px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+.circle {
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #dbeafe;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-weight: 700;
+
+  color: var(--primary);
+
+}
+
+.workflow-step.active .circle {
+
+  background: var(--primary);
+
+  color: white;
+
+}
+
+.line {
+
+  height: 3px;
+
+  width: 48px;
+
+  background: #d1d5db;
+
+}
+
+/* ==========================================================
+   WORKBOOK CARD
+========================================================== */
+
+.workbook-card {
+
+  border: none;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+}
+
+.workbook-card .card-body {
+
+  padding: 30px;
+
+}
+
+.workbook-card h5 {
+
+  font-weight: 700;
+
+}
+
+#overallStatus {
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+
+}
+
+/* ==========================================================
+   KPI
+========================================================== */
+
+.kpi-card {
+
+  border: none;
+
+  border-radius: 18px;
+
+  box-shadow: var(--shadow);
+
+  transition: .3s;
+
+}
+
+.kpi-card:hover {
+
+  transform: translateY(-4px);
+
+}
+
+.kpi-card .card-body {
+
+  padding: 22px;
+
+}
+
+.kpi-card i {
+
+  color: var(--primary);
+
+}
+
+.kpi-card h6 {
+
+  margin-top: 15px;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+}
+
+.kpi-card h4 {
+
+  margin-top: 8px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+}
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.badge {
+
+  padding: 8px 14px;
+
+  border-radius: 10px;
+
+}
+
+/* ==========================================================
+   SECTION SPACING
+========================================================== */
+
+section {
+
+  margin-bottom: 25px;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:992px) {
+
+  .tool-header {
+
+    position: relative;
+
+  }
+
+  .workflow-progress {
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+  }
+
+  .line {
+
+    display: none;
+
+  }
+
+  .workflow-step {
+
+    min-width: 110px;
+
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .tool-brand {
+
+    text-align: center;
+
+  }
+
+  .tool-brand h3 {
+
+    font-size: 22px;
+
+  }
+
+  .card-body {
+
+    padding: 18px !important;
+
+  }
+
+  .workflow-step {
+
+    width: 100%;
+
+  }
+
+}
+
+@media(max-width:576px) {
+
+  .tool-header {
+
+    padding: 20px;
+
+  }
+
+  .form-control,
+  .form-select,
+  .btn-warning {
+
+    height: 44px;
+
+  }
+
+  .workflow-step span {
+
+    font-size: 12px;
+
+  }
+
+}
+
+/* ==========================================================
+   PROMPT BUILDER
+========================================================== */
+
+.prompt-builder-card {
+
+  border: 2px solid rgba(15, 108, 189, .22);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(15, 108, 189, .12);
+  background: #fff;
+
+}
+
+.prompt-builder-card .card-header {
+
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+
+}
+
+.prompt-builder-card h4 {
+
+  font-weight: 700;
+  color: var(--primary);
+
+}
+
+/* ==========================================================
+   PROMPT SECTION
+========================================================== */
+
+.prompt-section {
+
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: .25s;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+
+}
+
+.prompt-section:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+
+}
+
+.prompt-section .card-header {
+
+  background: #F9FAFB;
+  border-bottom: 1px solid var(--border);
+  padding: 15px 20px;
+
+}
+
+.prompt-section .card-header h6 {
+
+  font-weight: 600;
+  color: var(--text);
+
+}
+
+.prompt-section .card-body {
+
+  padding: 20px;
+
+}
+
+/* ==========================================================
+   TEXT AREA
+========================================================== */
+
+textarea.form-control {
+
+  resize: vertical;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
+
+  min-height: 120px;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  padding: 16px;
+
+  transition: .25s;
+
+  background: #fff;
+
+}
+
+textarea.form-control:focus {
+
+  border-color: var(--secondary);
+
+  box-shadow: 0 0 0 3px rgba(15, 108, 189, .15);
+
+}
+
+textarea[readonly] {
+
+  background: #FAFBFC;
+
+  cursor: default;
+
+}
+
+/* ==========================================================
+   EDIT BUTTON
+========================================================== */
+
+.btn-outline-primary {
+
+  border-radius: 10px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  padding: 6px 14px;
+
+  transition: .25s;
+
+}
+
+.btn-outline-primary:hover {
+
+  transform: translateY(-1px);
+
+}
+
+/* ==========================================================
+   STATUS BADGES
+========================================================== */
+
+.badge.bg-success {
+
+  background: #16A34A !important;
+
+}
+
+.badge.bg-warning {
+
+  background: #F4B400 !important;
+  color: #111827;
+
+}
+
+.badge.bg-danger {
+
+  background: #DC2626 !important;
+
+}
+
+/* ==========================================================
+   PROMPT SAFETY
+========================================================== */
+
+.prompt-section strong {
+
+  color: var(--primary);
+
+}
+
+#piiResult {
+
+  font-weight: 600;
+
+  color: #16A34A;
+
+}
+
+#validationResult {
+
+  font-weight: 600;
+
+  color: #16A34A;
+
+}
+
+/* ==========================================================
+   GENERATED PROMPT
+========================================================== */
+
+.border-primary {
+
+  border: none !important;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow: 0 6px 18px rgba(31, 78, 121, .12);
+
+}
+
+.border-primary .card-header {
+
+  background: linear-gradient(90deg,
+      #1F4E79,
+      #0F6CBD);
+
+  color: white;
+
+  padding: 18px 24px;
+
+}
+
+.border-primary textarea {
+
+  min-height: 320px;
+
+  background: white;
+
+}
+
+.border-primary .card-footer {
+
+  background: #fff;
+
+  border-top: 1px solid var(--border);
+
+  padding: 18px 24px;
+
+}
+
+/* ==========================================================
+   COPY BUTTON
+========================================================== */
+
+#copyPromptBtn {
+
+  border-radius: 12px;
+
+  padding: 10px 22px;
+
+  font-weight: 600;
+
+  transition: .25s;
+
+}
+
+#copyPromptBtn:hover {
+
+  transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   AUTO SAVE
+========================================================== */
+
+#promptStatus {
+
+  font-weight: 600;
+  border: 1px solid transparent;
+
+}
+
+#promptStatus.bg-success {
+
+  background: #EAF8EF !important;
+  border-color: #B7E4C7;
+  color: #15803D !important;
+
+}
+
+#promptStatus.bg-warning {
+
+  background: #FFF7D6 !important;
+  border-color: #FDE68A;
+  color: #A16207 !important;
+
+}
+
+/* ==========================================================
+   EDIT MODE
+========================================================== */
+
+.editing textarea {
+
+  background: #FFFDF2;
+
+  border: 2px solid #F4B400;
+
+}
+
+.editing {
+
+  box-shadow: 0 0 0 3px rgba(244, 180, 0, .15);
+
+}
+
+/* ==========================================================
+   COLLAPSIBLE EFFECT
+========================================================== */
+
+.prompt-section {
+
+  animation: fadeUp .3s ease;
+
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(12px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:992px) {
+
+  .prompt-builder-card {
+
+    margin-bottom: 25px;
+
+  }
+
+  .border-primary textarea {
+
+    min-height: 250px;
+
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .prompt-builder-card .card-header {
+
+    padding: 16px;
+
+  }
+
+  .prompt-section .card-header {
+
+    padding: 14px;
+
+  }
+
+  .prompt-section .card-body {
+
+    padding: 16px;
+
+  }
+
+  textarea.form-control {
+
+    min-height: 100px;
+
+  }
+
+}
+
+@media(max-width:576px) {
+
+  #copyPromptBtn {
+
+    width: 100%;
+
+  }
+
+  .btn-outline-primary {
+
+    font-size: 12px;
+
+  }
+
+}
+
+/* ==========================================================
+   GPT WORKSPACE
+========================================================== */
+
+.gpt-workspace-card {
+
+  border: 2px solid rgba(15, 108, 189, .22);
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(15, 108, 189, .12);
+  background: #fff;
+  height: 100%;
+
+}
+
+.gpt-workspace-card .card-header {
+
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 20px 24px;
+
+}
+
+.gpt-workspace-card h4 {
+
+  font-weight: 700;
+  color: var(--primary);
+
+}
+
+/* Keep the two primary work areas aligned on desktop without making either one sticky. */
+@media (min-width: 992px) {
+
+  .prompt-builder-card,
+  .gpt-workspace-card {
+
+    height: calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .prompt-builder-card > .card-body,
+  .gpt-workspace-card > .flex-grow-1 {
+
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+
+  }
+
+  #gptIframe {
+
+    display: block;
+    height: 100% !important;
+
+  }
+
+}
+
+/* ==========================================================
+   GPT PREVIEW
+========================================================== */
+
+#gptPreview {
+
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  min-height: 450px;
+  resize: none;
+  background: #FAFBFC;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 18px;
+
+}
+
+#gptPreview:focus {
+
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(15, 108, 189, .15);
+
+}
+
+/* ==========================================================
+   MODEL CARD
+========================================================== */
+
+.model-card {
+
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  font-weight: 600;
+  transition: .25s;
+
+}
+
+.model-card:hover {
+
+  background: #EEF6FF;
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+
+}
+
+.model-card i {
+
+  color: #16A34A;
+
+}
+
+/* ==========================================================
+   OPEN GPT BUTTON
+========================================================== */
+
+#openGPTBtn {
+
+  height: 52px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  transition: .25s;
+
+}
+
+#openGPTBtn:hover {
+
+  transform: translateY(-2px);
+
+}
+
+/* ==========================================================
+   AI TIPS
+========================================================== */
+
+.alert-info {
+
+  border: none;
+  border-radius: 16px;
+  background: #EFF6FF;
+  color: #1F2937;
+
+}
+
+.alert-info ul {
+
+  padding-left: 20px;
+
+}
+
+.alert-info li {
+
+  margin-bottom: 6px;
+
+}
+
+/* ==========================================================
+   LOADING OVERLAY
+========================================================== */
+
+.loading-overlay {
+
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, .90);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+}
+
+.loading-content {
+
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 500px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: var(--shadow);
+
+}
+
+.progress {
+
+  height: 12px;
+  border-radius: 30px;
+
+}
+
+.progress-bar {
+
+  border-radius: 30px;
+
+}
+
+/* ==========================================================
+   TOAST
+========================================================== */
+
+.toast {
+
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+}
+
+.toast-header {
+
+  background: white;
+
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.modal-content {
+
+  border: none;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+
+}
+
+.modal-header {
+
+  border-bottom: 1px solid var(--border);
+
+}
+
+.modal-footer {
+
+  border-top: 1px solid var(--border);
+
+}
+
+/* Give the prompt preview a large, readable workspace. */
+#promptPreviewModal .modal-dialog {
+
+  max-width: min(1200px, 95vw);
+  height: calc(100vh - 3.5rem);
+
+}
+
+#promptPreviewModal .modal-content {
+
+  height: 100%;
+
+}
+
+#promptPreviewModal .modal-body {
+
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 16px;
+  overflow: hidden;
+
+}
+
+#promptPreview {
+
+  width: 100%;
+  height: 100% !important;
+  min-height: 0;
+  resize: vertical;
+  font-family: var(--bs-font-monospace);
+
+}
+
+@media (max-width: 768px) {
+
+  #promptPreview {
+
+    min-height: 0;
+
+  }
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer {
+
+  background: white;
+  border-top: 1px solid var(--border);
+
+}
+
+footer strong {
+
+  color: var(--primary);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+
+  width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: #C7D2FE;
+  border-radius: 30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: #94A3B8;
+
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+.fade-in {
+
+  animation: fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+    transform: translateY(10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+
+}
+
+.scale-up {
+
+  animation: scaleUp .25s ease;
+
+}
+
+@keyframes scaleUp {
+
+  from {
+
+    transform: scale(.95);
+    opacity: 0;
+
+  }
+
+  to {
+
+    transform: scale(1);
+    opacity: 1;
+
+  }
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px) {
+
+  #gptPreview {
+
+    min-height: 350px;
+
+  }
+
+}
+
+@media(max-width:992px) {
+
+  .gpt-workspace-card {
+
+    margin-top: 25px;
+
+  }
+
+  .loading-content {
+
+    width: 90%;
+
+  }
+
+}
+
+@media(max-width:768px) {
+
+  .gpt-workspace-card .card-header {
+
+    padding: 18px;
+
+  }
+
+  #gptPreview {
+
+    min-height: 250px;
+
+  }
+
+  .model-card {
+
+    padding: 12px;
+
+  }
+
+  #openGPTBtn {
+
+    width: 100%;
+
+  }
+
+}
+
+@media(max-width:576px) {
+
+  .loading-content {
+
+    padding: 25px;
+
+  }
+
+  .alert-info {
+
+    font-size: 13px;
+
+  }
+
+  footer {
+
+    text-align: center;
+
+  }
+
+  footer .d-flex {
+
+    display: block !important;
+
+  }
+
+}
